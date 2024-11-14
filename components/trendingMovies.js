@@ -36,7 +36,7 @@ export default function TrendingMovies({ data }) {
 const MovieCard = ({ item, handleClick }) => {
     return (
 
-        <TouchableWithoutFeedback onPress={handleClick}>
+        <TouchableWithoutFeedback onPress={() => handleClick(item)}>
             <Image
                 source={require('../assets/images/moviePoster2.jpg')}
                 style={{
